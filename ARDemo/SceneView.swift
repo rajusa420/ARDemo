@@ -7,11 +7,18 @@ import Foundation
 import ARKit
 import Firebase
 
+enum SceneViewMode {
+    case displayMode
+    case detectMode
+}
+
 class SceneView: SKScene {
 
     public var sceneView: ARSKView {
         return view as! ARSKView
     }
+
+    public var sceneViewMode: SceneViewMode = .displayMode
 
     public var isWorldSetUp: Bool = false
     private var currentAnchors: [ARAnchor] = []
@@ -44,7 +51,7 @@ class SceneView: SKScene {
             return
         }
 
-        if !objectDetectionProcessor.isProcessingSample {
+        if !objectDetectionProcessor.isProcessingSample && sceneViewMode == .detectMode {
             let capturedImage: CVPixelBuffer = currentFrame.capturedImage
 
             if self.pixelBufferSize.width == 0 || self.pixelBufferSize.height == 0 {
@@ -52,9 +59,12 @@ class SceneView: SKScene {
                 let imageHeight: size_t = CVPixelBufferGetHeight(capturedImage)
                 self.pixelBufferSize = CGSize(width: imageWidth, height: imageHeight)
             }
-
-            // TODO - This should return my own type of detected object
+            
             objectDetectionProcessor.detectObjects(buffer: capturedImage) { [weak self] detectedObjects, error in
+                guard self?.sceneViewMode == .detectMode else {
+                    return
+                }
+
                 if var currentAnchors = self?.currentAnchors, var anchorNames = self?.anchorNames {
                     for anchor: ARAnchor in currentAnchors {
                         self?.sceneView.session.remove(anchor: anchor)
@@ -103,5 +113,20 @@ class SceneView: SKScene {
                 }
             }
         }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>,
+                               with event: UIEvent?) {
+        sceneViewMode = .detectMode
+
+        let feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+        feedbackGenerator.impactOccurred()
+
+        super.touchesBegan(touches, with: event)
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        sceneViewMode = .displayMode
+        super.touchesEnded(touches, with: event)
     }
 }

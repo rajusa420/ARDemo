@@ -49,7 +49,7 @@ public class CoreMLObjectDetectionProcessor: ObjectDetector {
                             let topLabelObservation = objectObservation.labels[0]
                             NSLog("Object found: " + topLabelObservation.identifier + ":" + objectObservation.confidence.description)
                             
-                            if objectObservation.confidence > 0.75 {
+                            if objectObservation.confidence > DetectedObjectConfidenceRequired {
                                 let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(pixelBufferWidth), Int(pixelBufferHeight))
                                 detectedObjects.append(DetectedObject(frame: objectBounds, name: topLabelObservation.identifier, description: topLabelObservation.description))
                             }

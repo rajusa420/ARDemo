@@ -51,7 +51,7 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
 
             var detectedObjects: [DetectedObject] = []
             for visionObject: VisionObject in detectedVisionObjects {
-                if let confidence = visionObject.confidence?.floatValue, confidence > 0.50 {
+                if let confidence = visionObject.confidence?.floatValue, confidence > DetectedObjectConfidenceRequired {
                     detectedObjects.append(DetectedObject(frame: visionObject.frame, name: self?.getStringFromDetectedObjectCategory(category: visionObject.classificationCategory) ?? "Unknown", description: ""))
                 }
             }

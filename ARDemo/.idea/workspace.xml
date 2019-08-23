@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="806e0cfe-eb35-4fba-8a09-231d849392e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcodeproj/project.xcworkspace/xcuserdata/Raj.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/ARDemo.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcworkspace/xcuserdata/Raj.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcworkspace/xcuserdata/Raj.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARDemo.xcworkspace/xcuserdata/Raj.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AppDelegate.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApplicationUIHelpers/ApplicationColors.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ApplicationUIHelpers/ApplicationFonts.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Base.lproj/Main.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageBufferHelpers/ImageBufferHelpers.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjectDetection/CoreMLObjectDetectionProcessor.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjectDetection/FirebaseObjectDetectionProcessor.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjectDetection/ObjectDetectionProcessorFactory.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ObjectDetection/ObjectDetector.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Assets.xcassets/Bug.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Assets.xcassets/Bug.imageset/bug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Assets.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/GoogleService-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Models/ObjectDetectorModel.mlmodel" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/art.scnassets/ship.scn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/art.scnassets/texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SceneView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Podfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Podfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Firebase/CoreOnly/Sources/Firebase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Firebase/CoreOnly/Sources/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Firebase/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FIRAnalyticsConnector.framework/FIRAnalyticsConnector" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FIRAnalyticsConnector.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/FirebaseAnalytics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRAnalyticsConfiguration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRApp.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRAppAssociationRegistration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRBundleUtil.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRComponent.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRComponentContainer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRComponentType.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRConfiguration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRCoreDiagnosticsConnector.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRDependency.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRDiagnosticsData.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRErrors.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIROptions.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/FIRVersion.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRAnalyticsConfiguration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRAppAssociationRegistration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRBundleUtil.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRComponent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRComponentContainerInternal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRComponentType.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRConfigurationInternal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRCoreDiagnosticsConnector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRDependency.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRDiagnosticsData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRLibrary.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIROptionsInternal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Private/FIRVersion.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCore/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/FIRCoreDiagnostics.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/FIRCoreDiagnosticsDateFileStorage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/FIRCoreDiagnosticsDateFileStorage.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/Firebase/CoreDiagnostics/FIRCDLibrary/Protogen/nanopb/firebasecore.nanopb.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnostics/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnosticsInterop/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnosticsInterop/Interop/CoreDiagnostics/Public/FIRCoreDiagnosticsInterop.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnosticsInterop/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseCoreDiagnosticsInterop/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRIMessageCode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID+Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID+Private.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceID.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAPNSInfo.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAPNSInfo.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthKeyChain.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthKeyChain.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDAuthService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDBackupExcludedPlist.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDBackupExcludedPlist.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences+Internal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences+Internal.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinPreferences_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinStore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCheckinStore.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCombinedHandler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDCombinedHandler.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDConstants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDConstants.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDDefines.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPair.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPair.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairStore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairStore.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeyPairUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeychain.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDKeychain.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStore.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStringEncoding.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDStringEncoding.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenDeleteOperation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenDeleteOperation.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenFetchOperation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenFetchOperation.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenInfo.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenInfo.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenManager.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenOperation+Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenOperation.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenOperation.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenStore.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDTokenStore.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDURLQueryItem.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDURLQueryItem.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDVersionUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/FIRInstanceIDVersionUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/NSError+FIRInstanceID.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/NSError+FIRInstanceID.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/Private/FIRInstanceID_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FIRInstanceID.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/Firebase/InstanceID/Public/FirebaseInstanceID.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseInstanceID/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/FirebaseMLCommon" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Headers/FIRLocalModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Headers/FIRModelDownloadConditions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Headers/FIRModelDownloadNotifications.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Headers/FIRModelManager.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Headers/FIRRemoteModel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Headers/FirebaseMLCommon.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLCommon/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/FirebaseMLVision" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVision.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionBarcode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionBarcodeDetector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionBarcodeDetectorOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionCloudDetectorOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionCloudDocumentTextRecognizerOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionCloudImageLabelerOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionCloudLandmark.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionCloudLandmarkDetector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionCloudTextRecognizerOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionDocumentText.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionDocumentTextBlock.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionDocumentTextParagraph.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionDocumentTextRecognizer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionDocumentTextSymbol.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionDocumentTextWord.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionFace.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionFaceContour.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionFaceDetector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionFaceDetectorOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionFaceLandmark.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionImage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionImageLabel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionImageLabeler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionImageMetadata.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionLatitudeLongitude.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionOnDeviceImageLabelerOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionPoint.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionText.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionTextBlock.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionTextElement.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionTextLine.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionTextRecognizedBreak.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionTextRecognizedLanguage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FIRVisionTextRecognizer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Headers/FirebaseMLVision.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/Frameworks/FirebaseMLVision.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVision/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/FirebaseMLVisionObjectDetection" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/Headers/FIRVision+ObjectDetection.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/Headers/FIRVisionObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/Headers/FIRVisionObjectDetector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/Headers/FIRVisionObjectDetectorOptions.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/Headers/FirebaseMLVisionObjectDetection.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/FirebaseMLVisionObjectDetection/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMGatherInputStream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMGatherInputStream.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMMIMEDocument.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMMIMEDocument.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMReadMonitorInputStream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMReadMonitorInputStream.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GTLRDefines.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVision.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVisionObjects.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVisionObjects.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVisionQuery.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVisionQuery.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVisionService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/GeneratedServices/Vision/GTLRVisionService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRBatchQuery.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRBatchQuery.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRBatchResult.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRBatchResult.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRDateTime.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRDateTime.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRDuration.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRDuration.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRErrorObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRErrorObject.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRObject.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRQuery.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRQuery.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRRuntimeCommon.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRRuntimeCommon.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRService.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRService.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRUploadParameters.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Objects/GTLRUploadParameters.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRBase64.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRBase64.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRFramework.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRFramework.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRURITemplate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRURITemplate.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAPIClientForREST/Source/Utilities/GTLRUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAppMeasurement/Frameworks/GoogleAppMeasurement.framework/GoogleAppMeasurement" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleAppMeasurement/Frameworks/GoogleAppMeasurement.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTAssert.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTClock.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTConsoleLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTDataFuture.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTEvent.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTLifecycle.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTPlatform.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTReachability.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTRegistrar.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTStorage.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTStoredEvent.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTTransformer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTTransport.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTUploadCoordinator.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/GDTUploadPackage.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTAssert.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTEvent_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTReachability.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTReachability_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTRegistrar_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTStorage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTStorage_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTTransformer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTTransformer_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTTransport_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTUploadCoordinator.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Private/GDTUploadPackage_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTClock.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTConsoleLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTDataFuture.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTEvent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTEventDataObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTEventTransformer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTLifecycle.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTPlatform.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTPrioritizer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTRegistrar.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTStoredEvent.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTTargets.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTTransport.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTUploadPackage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GDTUploader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/GoogleDataTransport/GDTLibrary/Public/GoogleDataTransport.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransport/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTNanopbHelpers.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTPrioritizer.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/GDTCCTUploader.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/Private/GDTCCTNanopbHelpers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/Private/GDTCCTPrioritizer.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/Private/GDTCCTUploader.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport/GDTCCTLibrary/Protogen/nanopb/cct.nanopb.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleDataTransportCCTSupport/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/GoogleMobileVision" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/Headers/GMVDetector.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/Headers/GMVDetectorConstants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/Headers/GMVFeature.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/Headers/GMVUtility.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/Headers/GoogleMobileVision.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleMobileVision/Detector/Frameworks/GoogleMobileVision.framework/Modules/module.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/Foundation/GTMLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/Foundation/GTMLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/Foundation/GTMNSData+zlib.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/GTMDefines.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleToolboxForMac/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/GULAppDelegateSwizzler.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Internal/GULAppDelegateSwizzler_Private.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Private/GULAppDelegateSwizzler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/AppDelegateSwizzler/Private/GULApplication.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Common/GULLoggerCodes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Logger/GULLogger.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Logger/Private/GULLogger.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GULLoggerLevel.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/GULSwizzler.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/Private/GULOriginalIMPConvenienceMacros.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/MethodSwizzler/Private/GULSwizzler.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/GULNSData+zlib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/NSData+zlib/GULNSData+zlib.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/GULMutableDictionary.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/GULNetwork.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/GULNetworkConstants.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/GULNetworkURLSession.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULMutableDictionary.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetwork.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkConstants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkLoggerProtocol.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkMessageCode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Network/Private/GULNetworkURLSession.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Reachability/GULReachabilityChecker+Internal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Reachability/GULReachabilityChecker.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityChecker.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityMessageCode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/UserDefaults/GULUserDefaults.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/GoogleUtilities/UserDefaults/Private/GULUserDefaults.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/GoogleUtilities/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Headers/Private/Firebase/Firebase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Headers/Private/FirebaseCoreDiagnosticsInterop/FIRCoreDiagnosticsData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Headers/Private/FirebaseCoreDiagnosticsInterop/FIRCoreDiagnosticsInterop.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Headers/Public/Firebase/Firebase.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Headers/Public/FirebaseCoreDiagnosticsInterop/FIRCoreDiagnosticsData.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Headers/Public/FirebaseCoreDiagnosticsInterop/FIRCoreDiagnosticsInterop.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Manifest.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/FirebaseCore.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/FirebaseCoreDiagnostics.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/FirebaseInstanceID.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/GTMSessionFetcher.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/GoogleAPIClientForREST.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/GoogleDataTransport.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/GoogleDataTransportCCTSupport.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/GoogleToolboxForMac.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/GoogleUtilities.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/Pods-ARDemo.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/Protobuf.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/nanopb.xcscheme" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Pods.xcodeproj/xcuserdata/Raj.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBArray.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBArray.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBArray_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBBootstrap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBCodedInputStream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBCodedInputStream.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBCodedInputStream_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBCodedOutputStream.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBCodedOutputStream.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBCodedOutputStream_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBDescriptor.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBDescriptor.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBDescriptor_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBDictionary.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBDictionary.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBDictionary_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBExtensionInternals.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBExtensionInternals.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBExtensionRegistry.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBExtensionRegistry.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBMessage.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBMessage.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBMessage_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBProtocolBuffers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBProtocolBuffers_RuntimeSupport.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBRootObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBRootObject.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBRootObject_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBRuntimeTypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUnknownField.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUnknownField.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUnknownFieldSet.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUnknownFieldSet.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUnknownFieldSet_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUnknownField_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUtilities.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUtilities.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBUtilities_PackagePrivate.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBWellKnownTypes.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBWellKnownTypes.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBWireFormat.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/GPBWireFormat.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Any.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Any.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Api.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Api.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Duration.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Duration.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Empty.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Empty.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/FieldMask.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/FieldMask.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/SourceContext.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/SourceContext.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Struct.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Struct.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Timestamp.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Timestamp.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Type.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Type.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Wrappers.pbobjc.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Protobuf/objectivec/google/protobuf/Wrappers.pbobjc.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCore/FirebaseCore-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCore/FirebaseCore-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCore/FirebaseCore.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCore/FirebaseCore.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GTMSessionFetcher/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleAPIClientForREST/GoogleAPIClientForREST.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleAPIClientForREST/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransport/GoogleDataTransport.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleDataTransportCCTSupport/GoogleDataTransportCCTSupport.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleToolboxForMac/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleUtilities/GoogleUtilities-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleUtilities/GoogleUtilities-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleUtilities/GoogleUtilities-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleUtilities/GoogleUtilities.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleUtilities/GoogleUtilities.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/GoogleUtilities/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo-acknowledgements.markdown" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo-acknowledgements.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo-frameworks.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo-resources.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo.debug.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo.release.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Protobuf/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Protobuf/Protobuf-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Protobuf/Protobuf-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Protobuf/Protobuf-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Protobuf/Protobuf.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/Protobuf/Protobuf.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/nanopb/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/nanopb/nanopb-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/nanopb/nanopb-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/nanopb/nanopb-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/nanopb/nanopb.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/Target Support Files/nanopb/nanopb.xcconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb_common.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb_common.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb_decode.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb_decode.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb_encode.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Pods/nanopb/pb_encode.h" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.gitignore" />
+        <option value="$PROJECT_DIR$/.idea/ARDemo.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/xcode.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PhkQfWKREJ04bcHuCG8lTEtu10" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="ARDemo" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ARDemo.xcworkspace" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ARDemo" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ARDemo" TARGET_NAME="ARDemo" CONFIG_NAME="Debug" SCHEME_NAME="ARDemo" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" RUN_TARGET_PROJECT_NAME="ARDemo" RUN_TARGET_NAME="ARDemo" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="806e0cfe-eb35-4fba-8a09-231d849392e9" name="Default Changelist" comment="" />
+      <created>1566333700288</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566333700288</updated>
+      <workItem from="1566333705685" duration="5437000" />
+      <workItem from="1566511935755" duration="21590000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

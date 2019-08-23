@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 public class ApplicationFonts {
-    
+
     public static func labelFontName() -> String {
         return "Avenir"
     }
-    
+
     public static func labelFontSize() -> CGFloat {
         return 12
     }

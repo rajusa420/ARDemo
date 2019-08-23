@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ARDemoViewController.swift
 //  ARDemo
 //
 //  Created by Raj Sathi on 8/22/19.
@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate {
+class ARDemoViewController: UIViewController, ARSKViewDelegate {
 
     var sceneView: ARSKView!
 
@@ -21,7 +21,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
             sceneView = view
             sceneView!.delegate = self
 
-            let scene = SceneView(size: view.bounds.size)
+            // Initialize our Sprite Kit scene and then present it using our ARSKView
+            let scene: ARDemoSceneView = ARDemoSceneView(size: view.bounds.size)
             scene.scaleMode = .resizeFill
             scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
@@ -49,23 +50,17 @@ class ViewController: UIViewController, ARSKViewDelegate {
     }
 
     // MARK: - ARSKViewDelegate
-
-    /*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-    */
-
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
+
+        // Callback to create SpriteKit nodes for the anchors created in the Scene View
+        // See ARDemoSceneView.update() for where the anchors are created using object
+        // detection
         let labelNode = SKLabelNode(fontNamed: ApplicationFonts.labelFontName())
         labelNode.fontColor = ApplicationColors.textColor()
         labelNode.fontSize = ApplicationFonts.labelFontSize()
         labelNode.color = UIColor.clear
 
-        let currentSceneView: SceneView = sceneView!.scene as! SceneView
+        let currentSceneView: ARDemoSceneView = sceneView!.scene as! ARDemoSceneView
         if let anchorName: String = currentSceneView.anchorNames[anchor.identifier] {
             labelNode.text = anchorName
         }
@@ -73,6 +68,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         let labelFrame: CGRect = labelNode.frame
         labelNode.position = CGPoint(x:0, y: -((labelFrame.size.height / 2) - 1.0));
 
+        // You can't directly supply a background color to a SKLabelNode so add a SKSpriteNode
+        // to provide a background color
         let backgroundColorNode: SKSpriteNode = SKSpriteNode(color: ApplicationColors.randomLabelBackgroundColor(), size: CGSize(width: labelFrame.width, height: labelFrame.height))
         backgroundColorNode.position = CGPoint(x: 200, y: 100)
         

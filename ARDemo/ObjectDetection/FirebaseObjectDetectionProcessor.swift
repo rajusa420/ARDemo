@@ -10,7 +10,7 @@ import AVFoundation
 class FirebaseObjectDetectionProcessor: ObjectDetector {
 
     private lazy var visionDetectionOptions: VisionObjectDetectorOptions = {
-        let options = VisionObjectDetectorOptions()
+        let options: VisionObjectDetectorOptions = VisionObjectDetectorOptions()
         options.detectorMode = .singleImage
         options.shouldEnableMultipleObjects = true
         options.shouldEnableClassification = true
@@ -38,7 +38,10 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
         // Asynchronously process the sample and detect objects
         let image: VisionImage = getVisionImage(buffer: sampleBuffer)
         objectDetector.process(image) { [weak self] detectedVisionObjects, error in
-            defer { self?.isProcessingSample = false }
+            // Reset our processing flag once we are done via defer
+            defer {
+                self?.isProcessingSample = false
+            }
             guard error == nil else {
                 // Error.
                 return
@@ -51,11 +54,14 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
 
             var detectedObjects: [DetectedObject] = []
             for visionObject: VisionObject in detectedVisionObjects {
+                // Only include objects that meet a confidence threshold
                 if let confidence = visionObject.confidence?.floatValue, confidence > DetectedObjectConfidenceRequired {
                     detectedObjects.append(DetectedObject(frame: visionObject.frame, name: self?.getStringFromDetectedObjectCategory(category: visionObject.classificationCategory) ?? "Unknown", description: ""))
                 }
             }
 
+            // Only call the completion delegate if objects are detected that way if any objects were
+            // previously detected they remain displayed
             if detectedObjects.count > 0 {
                 completion(detectedObjects, nil)
             }
@@ -92,7 +98,7 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
         }
     }
 
-    private func getStringFromDetectedObjectCategory(category: VisionObjectCategory)-> String {
+    private func getStringFromDetectedObjectCategory(category: VisionObjectCategory) -> String {
         switch category {
         case .fashionGoods:
             return "Fashion Goods"
@@ -100,7 +106,7 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
             return "Food"
         case .homeGoods:
             return "Home Goods"
-        case . places:
+        case .places:
             return "Places"
         case .plants:
             return "Plants"

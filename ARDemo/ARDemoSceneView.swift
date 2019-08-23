@@ -12,9 +12,10 @@ enum SceneViewMode {
     case detectMode
 }
 
-class SceneView: SKScene {
+class ARDemoSceneView: SKScene {
 
     public var sceneView: ARSKView {
+        // Called by the ARDemoViewController and used as the view that will present this scene
         return view as! ARSKView
     }
 
@@ -29,15 +30,21 @@ class SceneView: SKScene {
 
     private func setUpWorld() {
         guard let currentFrame = sceneView.session.currentFrame
-                else { return }
+                else {
+            return
+        }
 
+        // If we start saving anchors this is where we could load them up
+
+        // Test code to add an anchor at startup
         var translation: simd_float4x4 = matrix_identity_float4x4
         translation.columns.3.z = -0.3
 
-        let transform = currentFrame.camera.transform * translation
-        let anchor = ARAnchor(transform: transform)
+        let transform: simd_float4x4 = currentFrame.camera.transform * translation
+        let anchor: ARAnchor = ARAnchor(transform: transform)
         sceneView.session.add(anchor: anchor)
         currentAnchors.append(anchor)
+        anchorNames[anchor.identifier] = "Test Anchor"
 
         isWorldSetUp = true
     }
@@ -46,30 +53,35 @@ class SceneView: SKScene {
         if !isWorldSetUp {
             setUpWorld()
         }
-        
+
         guard let currentFrame: ARFrame = sceneView.session.currentFrame else {
             return
         }
 
+        // update is called 60 times per second so only pass in the image buffer if we
+        // aren't already processing one
         if !objectDetectionProcessor.isProcessingSample && sceneViewMode == .detectMode {
             let capturedImage: CVPixelBuffer = currentFrame.capturedImage
 
+            // Save the pixel buffer size so that later we can translate the position of the detected
+            // object into the right coordinate space
             if self.pixelBufferSize.width == 0 || self.pixelBufferSize.height == 0 {
                 let imageWidth: size_t = CVPixelBufferGetWidth(capturedImage)
                 let imageHeight: size_t = CVPixelBufferGetHeight(capturedImage)
                 self.pixelBufferSize = CGSize(width: imageWidth, height: imageHeight)
             }
-            
+
             objectDetectionProcessor.detectObjects(buffer: capturedImage) { [weak self] detectedObjects, error in
                 guard self?.sceneViewMode == .detectMode else {
                     return
                 }
 
+                // Clear all current anchors for detected objects
                 if var currentAnchors = self?.currentAnchors, var anchorNames = self?.anchorNames {
                     for anchor: ARAnchor in currentAnchors {
                         self?.sceneView.session.remove(anchor: anchor)
                     }
-                    
+
                     currentAnchors.removeAll()
                     anchorNames.removeAll()
                 }
@@ -99,7 +111,7 @@ class SceneView: SKScene {
                 }
             }
         }
-        
+
         if let lightEstimate = currentFrame.lightEstimate {
             let neutralIntensity: CGFloat = 1000
             let ambientIntensity = min(lightEstimate.ambientIntensity,

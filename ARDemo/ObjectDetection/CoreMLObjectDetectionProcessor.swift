@@ -17,58 +17,72 @@ public class CoreMLObjectDetectionProcessor: ObjectDetector {
 
     private lazy var visionModel: VNCoreMLModel? = {
         do {
-            guard let modelURL = Bundle.main.url(forResource: "ObjectDetectorModel", withExtension: "mlmodelc") else {
-                NSLog("Error loading model")
+            guard let modelURL: URL = Bundle.main.url(forResource: "ObjectDetectorModel", withExtension: "mlmodelc") else {
+                NSLog("Error loading model from bundle")
                 return nil
             }
-            let visionModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL))
+            let visionModel: VNCoreMLModel = try VNCoreMLModel(for: MLModel(contentsOf: modelURL))
             return visionModel
         } catch {
-            NSLog("Error loading model")
+            NSLog("Exception thrown while loading model")
         }
 
         return nil
     }()
 
     private var requests = [VNRequest]()
+
     private func setupObjectDetectionProcess() {
-    if let visionModel = visionModel {
-        let objectRecognition = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
-            DispatchQueue.main.async(execute: {
-                [weak self] in
-                // perform all the UI updates on the main queue
-                defer { self?.isProcessingSample = false }
-                if let callback = self?.objectDetectionCallBack, let pixelBufferWidth = self?.pixelBufferSize.width, let pixelBufferHeight = self?.pixelBufferSize.height {
-                    if let results = request.results {
+        if let visionModel: VNCoreMLModel = visionModel {
+            // The object recognition request is setup here and is passed in to VNImageRequestHandler in the detect
+            // objects method to perform the object detection
+            let objectRecognitionRequest: VNCoreMLRequest = VNCoreMLRequest(model: visionModel, completionHandler: { (request, error) in
+                // Perform the processing and creation of detected objects on the main thread
+                DispatchQueue.main.async(execute: {
+                    [weak self] in
+                    defer {
+                        // Once we are done with the processing reset our flags via defer
+                        self?.isProcessingSample = false
+                    }
+
+                    if let callback: ObjectDetectionCallback = self?.objectDetectionCallBack,
+                       let pixelBufferWidth: CGFloat = self?.pixelBufferSize.width,
+                       let pixelBufferHeight: CGFloat = self?.pixelBufferSize.height,
+                       let results: [Any] = request.results {
+
                         var detectedObjects: [DetectedObject] = []
                         for observation in results where observation is VNRecognizedObjectObservation {
                             guard let objectObservation = observation as? VNRecognizedObjectObservation else {
                                 continue
                             }
 
-                            let topLabelObservation = objectObservation.labels[0]
+                            let topLabelObservation: VNClassificationObservation = objectObservation.labels[0]
                             NSLog("Object found: " + topLabelObservation.identifier + ":" + objectObservation.confidence.description)
-                            
+
+                            // We don't label objects that we find that are below a confidence threshold
                             if objectObservation.confidence > DetectedObjectConfidenceRequired {
-                                let objectBounds = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(pixelBufferWidth), Int(pixelBufferHeight))
+                                let objectBounds: CGRect = VNImageRectForNormalizedRect(objectObservation.boundingBox, Int(pixelBufferWidth), Int(pixelBufferHeight))
                                 detectedObjects.append(DetectedObject(frame: objectBounds, name: topLabelObservation.identifier, description: topLabelObservation.description))
                             }
                         }
 
+                        // Only call the completion delegate if objects are detected that way if any objects were
+                        // previously detected they remain displayed
                         if detectedObjects.count > 0 {
                             callback(detectedObjects, nil)
                         }
+
                     }
-                }
+                })
             })
-        })
-        self.requests = [objectRecognition]
+            self.requests = [objectRecognitionRequest]
+        }
     }
-}
 
     public var isProcessingSample: Bool = false
     private var objectDetectionCallBack: ObjectDetectionCallback? = nil
     private var pixelBufferSize: CGSize = CGSize(width: 0, height: 0)
+
     public func detectObjects(buffer pixelBuffer: CVPixelBuffer, completion: @escaping ObjectDetectionCallback) {
         guard !isProcessingSample else {
             return

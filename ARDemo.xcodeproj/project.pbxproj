@@ -19,7 +19,6 @@
 		3530092A2310631800F63819 /* ObjectDetectorModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 353009292310631800F63819 /* ObjectDetectorModel.mlmodel */; };
 		3530092E2311769C00F63819 /* DetectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530092D2311769C00F63819 /* DetectButton.swift */; };
 		35AD06AD230C2DFF0045ED05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD06AC230C2DFF0045ED05 /* AppDelegate.swift */; };
-		35AD06AF230C2DFF0045ED05 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AD06AE230C2DFF0045ED05 /* art.scnassets */; };
 		35AD06B1230C2DFF0045ED05 /* ARDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD06B0230C2DFF0045ED05 /* ARDemoViewController.swift */; };
 		35AD06B4230C2DFF0045ED05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35AD06B2230C2DFF0045ED05 /* Main.storyboard */; };
 		35AD06B6230C2E010045ED05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AD06B5230C2E010045ED05 /* Assets.xcassets */; };
@@ -42,7 +41,6 @@
 		3530092D2311769C00F63819 /* DetectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectButton.swift; sourceTree = "<group>"; };
 		35AD06A9230C2DFF0045ED05 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AD06AC230C2DFF0045ED05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		35AD06AE230C2DFF0045ED05 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		35AD06B0230C2DFF0045ED05 /* ARDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDemoViewController.swift; sourceTree = "<group>"; };
 		35AD06B3230C2DFF0045ED05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35AD06B5230C2E010045ED05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				353009282310630300F63819 /* Models */,
 				3530091B230F604B00F63819 /* GoogleService-Info.plist */,
 				35AD06B5230C2E010045ED05 /* Assets.xcassets */,
-				35AD06AE230C2DFF0045ED05 /* art.scnassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -232,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35AD06AF230C2DFF0045ED05 /* art.scnassets in Resources */,
 				35AD06B9230C2E010045ED05 /* LaunchScreen.storyboard in Resources */,
 				3530091C230F604B00F63819 /* GoogleService-Info.plist in Resources */,
 				35AD06B6230C2E010045ED05 /* Assets.xcassets in Resources */,

@@ -31,4 +31,4 @@ public protocol ObjectDetector {
     func detectObjects(buffer pixelBuffer: CVPixelBuffer, completion: @escaping ObjectDetectionCallback)
 }
 
-public let DetectedObjectConfidenceRequired: Float = 0.1
+public let DetectedObjectConfidenceRequired: Float = 0.75

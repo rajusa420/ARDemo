@@ -17,6 +17,7 @@
 		3530092523104A8E00F63819 /* ApplicationFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530092423104A8E00F63819 /* ApplicationFonts.swift */; };
 		3530092723104AA000F63819 /* ApplicationColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530092623104AA000F63819 /* ApplicationColors.swift */; };
 		3530092A2310631800F63819 /* ObjectDetectorModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 353009292310631800F63819 /* ObjectDetectorModel.mlmodel */; };
+		3530092E2311769C00F63819 /* DetectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530092D2311769C00F63819 /* DetectButton.swift */; };
 		35AD06AD230C2DFF0045ED05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD06AC230C2DFF0045ED05 /* AppDelegate.swift */; };
 		35AD06AF230C2DFF0045ED05 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 35AD06AE230C2DFF0045ED05 /* art.scnassets */; };
 		35AD06B1230C2DFF0045ED05 /* ARDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AD06B0230C2DFF0045ED05 /* ARDemoViewController.swift */; };
@@ -38,6 +39,7 @@
 		3530092423104A8E00F63819 /* ApplicationFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFonts.swift; sourceTree = "<group>"; };
 		3530092623104AA000F63819 /* ApplicationColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationColors.swift; sourceTree = "<group>"; };
 		353009292310631800F63819 /* ObjectDetectorModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ObjectDetectorModel.mlmodel; sourceTree = "<group>"; };
+		3530092D2311769C00F63819 /* DetectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectButton.swift; sourceTree = "<group>"; };
 		35AD06A9230C2DFF0045ED05 /* ARDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35AD06AC230C2DFF0045ED05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35AD06AE230C2DFF0045ED05 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		3530092C2311766700F63819 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				3530092D2311769C00F63819 /* DetectButton.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
 		35AD06A0230C2DFF0045ED05 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 				3530091D23103E0B00F63819 /* ObjectDetection */,
 				35300920231044B200F63819 /* ImageBufferHelpers */,
 				3530092323104A6F00F63819 /* ApplicationUIHelpers */,
+				3530092C2311766700F63819 /* UIElements */,
 				35AD06B2230C2DFF0045ED05 /* Main.storyboard */,
 				35AD06B7230C2E010045ED05 /* LaunchScreen.storyboard */,
 				35AD06BA230C2E010045ED05 /* Info.plist */,
@@ -295,6 +306,7 @@
 			files = (
 				3530092723104AA000F63819 /* ApplicationColors.swift in Sources */,
 				3530092523104A8E00F63819 /* ApplicationFonts.swift in Sources */,
+				3530092E2311769C00F63819 /* DetectButton.swift in Sources */,
 				35AD06B1230C2DFF0045ED05 /* ARDemoViewController.swift in Sources */,
 				35AD06AD230C2DFF0045ED05 /* AppDelegate.swift in Sources */,
 				13FFB8FA84B92ED1C34F834F /* ARDemoSceneView.swift in Sources */,

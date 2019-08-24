@@ -21,4 +21,16 @@ public class ApplicationColors {
         let green: Float = Float(arc4random_uniform(255)) / Float(255.0)
         return UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1)
     }
+    
+    public static func detectButtonOuterRingColor() -> UIColor {
+        return UIColor.white
+    }
+    
+    public static func detectButtonInnerRingColor() -> UIColor {
+        return UIColor.red
+    }
+    
+    public static func detectButtonInnerRingPressedColor() -> UIColor {
+        return UIColor.gray
+    }
 }

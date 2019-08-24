@@ -29,22 +29,33 @@ class ARDemoSceneView: SKScene {
     private lazy var objectDetectionProcessor: ObjectDetector = ObjectDetectionProcessorFactory.getInstance()
 
     private func setUpWorld() {
-        guard let currentFrame = sceneView.session.currentFrame
-                else {
+        guard let _: ARFrame = sceneView.session.currentFrame else {
             return
         }
-
-        // If we start saving anchors this is where we could load them up
-
-        // Test code to add an anchor at startup
-        var translation: simd_float4x4 = matrix_identity_float4x4
-        translation.columns.3.z = -0.3
-
-        let transform: simd_float4x4 = currentFrame.camera.transform * translation
-        let anchor: ARAnchor = ARAnchor(transform: transform)
-        sceneView.session.add(anchor: anchor)
-        currentAnchors.append(anchor)
-        anchorNames[anchor.identifier] = "Test Anchor"
+//        // Test code to add an anchor at startup
+//        // If we start saving anchors this is where we could load them up
+//
+//
+//        var translation: simd_float4x4 = matrix_identity_float4x4
+//        translation.columns.3.z = -0.3
+//
+//        let transform: simd_float4x4 = currentFrame.camera.transform * translation
+//        let anchor: ARAnchor = ARAnchor(transform: transform)
+//        sceneView.session.add(anchor: anchor)
+//        currentAnchors.append(anchor)
+//        anchorNames[anchor.identifier] = "Test Anchor"
+        if let view = view {
+            // Button to enable detection mode
+            let viewFrame: CGRect = view.frame
+            let buttonSize: CGSize = CGSize(width: 80, height: 80)
+            let detectButton: DetectButton = DetectButton(frame: CGRect(origin: CGPoint(x: (viewFrame.size.width - buttonSize.width) / 2.0, y: viewFrame.size.height - buttonSize.height - 15.0), size: buttonSize))
+            //detectButton.layer.cornerRadius = buttonSize.width / 2.0
+            
+            detectButton.addTarget(self, action: #selector(detectButtonTouchDown), for: .touchDown)
+            detectButton.addTarget(self, action: #selector(detectButtonTouchUp), for: .touchUpInside)
+            detectButton.addTarget(self, action: #selector(detectButtonTouchUp), for: .touchUpOutside)
+            view.addSubview(detectButton)
+        }
 
         isWorldSetUp = true
     }
@@ -127,18 +138,14 @@ class ARDemoSceneView: SKScene {
         }
     }
 
-    override func touchesBegan(_ touches: Set<UITouch>,
-                               with event: UIEvent?) {
+    @objc public func detectButtonTouchDown(sender: UIButton) {
         sceneViewMode = .detectMode
 
         let feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
         feedbackGenerator.impactOccurred()
-
-        super.touchesBegan(touches, with: event)
     }
 
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @objc public func detectButtonTouchUp(sender: UIButton) {
         sceneViewMode = .displayMode
-        super.touchesEnded(touches, with: event)
     }
 }

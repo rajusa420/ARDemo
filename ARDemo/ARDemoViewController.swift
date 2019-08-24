@@ -68,15 +68,18 @@ class ARDemoViewController: UIViewController, ARSKViewDelegate {
         let labelFrame: CGRect = labelNode.frame
         labelNode.position = CGPoint(x:0, y: -((labelFrame.size.height / 2) - 1.0));
 
-        // You can't directly supply a background color to a SKLabelNode so add a SKSpriteNode
+        // You can't directly supply a background color to a SKLabelNode so add a SKShapeNode
         // to provide a background color
-        let backgroundColorNode: SKSpriteNode = SKSpriteNode(color: ApplicationColors.randomLabelBackgroundColor(), size: CGSize(width: labelFrame.width, height: labelFrame.height))
-        backgroundColorNode.position = CGPoint(x: 200, y: 100)
+        var backgroundColor: UIColor = UIColor.red
+        if currentSceneView.sceneViewMode == .displayMode {
+            backgroundColor = ApplicationColors.randomLabelBackgroundColor()
+        }
         
-        // TODO: Figure out why the background color isn't applying
-        backgroundColorNode.color = ApplicationColors.randomLabelBackgroundColor()
-        backgroundColorNode.colorBlendFactor = 1
-        backgroundColorNode.blendMode = .replace
+        let backgroundColorNode: SKShapeNode = SKShapeNode(rectOf: CGSize(width: labelFrame.width, height: labelFrame.height))
+        backgroundColorNode.fillColor = backgroundColor
+        backgroundColorNode.strokeColor = backgroundColor
+        backgroundColorNode.position = CGPoint(x: 200, y: 100)
+
         backgroundColorNode.addChild(labelNode)
 
         return backgroundColorNode

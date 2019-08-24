@@ -60,6 +60,7 @@ class ARDemoSceneView: SKScene {
         isWorldSetUp = true
     }
 
+    private var shouldRefreshAnchors: Bool = false
     override func update(_ currentTime: TimeInterval) {
         if !isWorldSetUp {
             setUpWorld()
@@ -88,13 +89,13 @@ class ARDemoSceneView: SKScene {
                 }
 
                 // Clear all current anchors for detected objects
-                if var currentAnchors = self?.currentAnchors, var anchorNames = self?.anchorNames {
-                    for anchor: ARAnchor in currentAnchors {
-                        self?.sceneView.session.remove(anchor: anchor)
+                if let weakSelf = self {
+                    for anchor: ARAnchor in weakSelf.currentAnchors {
+                        weakSelf.sceneView.session.remove(anchor: anchor)
                     }
 
-                    currentAnchors.removeAll()
-                    anchorNames.removeAll()
+                    weakSelf.currentAnchors.removeAll()
+                    weakSelf.anchorNames.removeAll()
                 }
 
                 guard let detectedObjects: [DetectedObject] = detectedObjects, !detectedObjects.isEmpty, let scene = self?.scene else {
@@ -118,6 +119,19 @@ class ARDemoSceneView: SKScene {
                                 self?.anchorNames[anchor.identifier] = detectedObject.name
                             }
                         }
+                    }
+                }
+            }
+        } else if sceneViewMode == .displayMode && shouldRefreshAnchors {
+            shouldRefreshAnchors = false
+
+            for anchor: ARAnchor in currentAnchors {
+                if let node: SKNode = self.sceneView.node(for: anchor) {
+                    if node is SKShapeNode  {
+                        let shapeNode: SKShapeNode = node as! SKShapeNode
+                        let backgroundColor = ApplicationColors.randomLabelBackgroundColor()
+                        shapeNode.fillColor = backgroundColor
+                        shapeNode.strokeColor = UIColor.white
                     }
                 }
             }
@@ -147,5 +161,8 @@ class ARDemoSceneView: SKScene {
 
     @objc public func detectButtonTouchUp(sender: UIButton) {
         sceneViewMode = .displayMode
+        // Trigger a refresh of the anchors so the labels can change their colors
+        // from record mode to display mode
+        self.shouldRefreshAnchors = true
     }
 }

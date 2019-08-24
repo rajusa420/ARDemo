@@ -8,7 +8,7 @@ import Foundation
 // Helper class that allows switching of object detection platforms
 // Currently CoreML and Firebase are supported (Just using the default available models)
 public class ObjectDetectionProcessorFactory {
-    private static let useFirebaseProcessor: Bool = false
+    private static let useFirebaseProcessor: Bool = true
 
     public static func getInstance() -> ObjectDetector {
         if useFirebaseProcessor {

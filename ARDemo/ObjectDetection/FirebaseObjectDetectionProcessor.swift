@@ -38,33 +38,35 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
         // Asynchronously process the sample and detect objects
         let image: VisionImage = getVisionImage(buffer: sampleBuffer)
         objectDetector.process(image) { [weak self] detectedVisionObjects, error in
-            // Reset our processing flag once we are done via defer
-            defer {
-                self?.isProcessingSample = false
-            }
-            guard error == nil else {
-                // Error.
-                return
-            }
-
-            guard let detectedVisionObjects: [VisionObject] = detectedVisionObjects, !detectedVisionObjects.isEmpty else {
-                // No objects detected.
-                return
-            }
-
-            var detectedObjects: [DetectedObject] = []
-            for visionObject: VisionObject in detectedVisionObjects {
-                // Only include objects that meet a confidence threshold
-                if let confidence = visionObject.confidence?.floatValue, confidence > DetectedObjectConfidenceRequired {
-                    detectedObjects.append(DetectedObject(frame: visionObject.frame, name: self?.getStringFromDetectedObjectCategory(category: visionObject.classificationCategory) ?? "Unknown", description: ""))
+            DispatchQueue.main.async(execute: {
+                // Reset our processing flag once we are done via defer
+                defer {
+                    self?.isProcessingSample = false
                 }
-            }
+                guard error == nil else {
+                    // Error.
+                    return
+                }
 
-            // Only call the completion delegate if objects are detected that way if any objects were
-            // previously detected they remain displayed
-            if detectedObjects.count > 0 {
-                completion(detectedObjects, nil)
-            }
+                guard let detectedVisionObjects: [VisionObject] = detectedVisionObjects, !detectedVisionObjects.isEmpty else {
+                    // No objects detected.
+                    return
+                }
+
+                var detectedObjects: [DetectedObject] = []
+                for visionObject: VisionObject in detectedVisionObjects {
+                    // Only include objects that meet a confidence threshold
+                    if let confidence = visionObject.confidence?.floatValue, confidence > DetectedObjectConfidenceRequired {
+                        detectedObjects.append(DetectedObject(frame: visionObject.frame, name: self?.getStringFromDetectedObjectCategory(category: visionObject.classificationCategory) ?? "Unknown", description: ""))
+                    }
+                }
+
+                // Only call the completion delegate if objects are detected that way if any objects were
+                // previously detected they remain displayed
+                if detectedObjects.count > 0 {
+                    completion(detectedObjects, nil)
+                }
+            })
         }
     }
 

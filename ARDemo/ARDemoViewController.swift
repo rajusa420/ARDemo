@@ -70,7 +70,7 @@ class ARDemoViewController: UIViewController, ARSKViewDelegate {
 
         // You can't directly supply a background color to a SKLabelNode so add a SKShapeNode
         // to provide a background color
-        var backgroundColor: UIColor = UIColor.red
+        var backgroundColor: UIColor = ApplicationColors.detectLabelBackgroundColor()
         if currentSceneView.sceneViewMode == .displayMode {
             backgroundColor = ApplicationColors.randomLabelBackgroundColor()
         }

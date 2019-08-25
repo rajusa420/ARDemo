@@ -33,4 +33,8 @@ public class ApplicationColors {
     public static func detectButtonInnerRingPressedColor() -> UIColor {
         return UIColor.gray
     }
+
+    public static func detectLabelBackgroundColor() -> UIColor {
+        return UIColor.red
+    }
 }

@@ -17,12 +17,12 @@ class ARDemoViewController: UIViewController, ARSKViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let view = self.view as? ARSKView {
+        if let view:ARSKView = self.view as? ARSKView {
             sceneView = view
             sceneView!.delegate = self
 
             // Initialize our Sprite Kit scene and then present it using our ARSKView
-            let scene: ARDemoSceneView = ARDemoSceneView(size: view.bounds.size)
+            let scene: ARDemoScene = ARDemoScene(size: view.bounds.size)
             scene.scaleMode = .resizeFill
             scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
@@ -60,7 +60,7 @@ class ARDemoViewController: UIViewController, ARSKViewDelegate {
         labelNode.fontSize = ApplicationFonts.labelFontSize()
         labelNode.color = UIColor.clear
 
-        let currentSceneView: ARDemoSceneView = sceneView!.scene as! ARDemoSceneView
+        let currentSceneView: ARDemoScene = sceneView!.scene as! ARDemoScene
         if let anchorName: String = currentSceneView.anchorNames[anchor.identifier] {
             labelNode.text = anchorName
         }

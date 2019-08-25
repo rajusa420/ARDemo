@@ -37,4 +37,8 @@ public class ApplicationColors {
     public static func detectLabelBackgroundColor() -> UIColor {
         return UIColor.red
     }
+
+    public static func detectInfoLabelBackgroundColor() -> UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
+    }
 }

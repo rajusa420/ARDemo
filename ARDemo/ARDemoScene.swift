@@ -12,10 +12,9 @@ enum SceneViewMode {
     case detectMode
 }
 
-class ARDemoSceneView: SKScene {
+class ARDemoScene: SKScene {
 
     public var sceneView: ARSKView {
-        // Called by the ARDemoViewController and used as the view that will present this scene
         return view as! ARSKView
     }
 
@@ -25,9 +24,11 @@ class ARDemoSceneView: SKScene {
     private var currentAnchors: [ARAnchor] = []
     public var anchorNames: [UUID: String] = [:]
     private var pixelBufferSize: CGSize = CGSize(width: 0, height: 0)
+    private var analysisBufferId: UInt = 0
 
     private lazy var objectDetectionProcessor: ObjectDetector = ObjectDetectionProcessorFactory.getInstance()
 
+    private let detectInfoLabelTag: Int = 55000
     private func setUpWorld() {
         guard let _: ARFrame = sceneView.session.currentFrame else {
             return
@@ -49,12 +50,18 @@ class ARDemoSceneView: SKScene {
             let viewFrame: CGRect = view.frame
             let buttonSize: CGSize = CGSize(width: 80, height: 80)
             let detectButton: DetectButton = DetectButton(frame: CGRect(origin: CGPoint(x: (viewFrame.size.width - buttonSize.width) / 2.0, y: viewFrame.size.height - buttonSize.height - 15.0), size: buttonSize))
-            //detectButton.layer.cornerRadius = buttonSize.width / 2.0
             
             detectButton.addTarget(self, action: #selector(detectButtonTouchDown), for: .touchDown)
             detectButton.addTarget(self, action: #selector(detectButtonTouchUp), for: .touchUpInside)
             detectButton.addTarget(self, action: #selector(detectButtonTouchUp), for: .touchUpOutside)
             view.addSubview(detectButton)
+
+            let detectionInfoLabel:UILabel = UILabel(frame: CGRect.zero)
+            detectionInfoLabel.tag = detectInfoLabelTag;
+            detectionInfoLabel.font = ApplicationFonts.infoLabelFont()
+            detectionInfoLabel.textColor = ApplicationColors.textColor()
+            detectionInfoLabel.backgroundColor = ApplicationColors.detectInfoLabelBackgroundColor()
+            view.addSubview(detectionInfoLabel)
         }
 
         isWorldSetUp = true
@@ -83,10 +90,14 @@ class ARDemoSceneView: SKScene {
                 self.pixelBufferSize = CGSize(width: imageWidth, height: imageHeight)
             }
 
+            self.updateInfoText(text: "Analyzing frame: " + analysisBufferId.description)
             objectDetectionProcessor.detectObjects(buffer: capturedImage) { [weak self] detectedObjects, error in
                 guard self?.sceneViewMode == .detectMode else {
                     return
                 }
+
+                self?.updateInfoText(text: "Frame Analyzed")
+                self?.analysisBufferId += 1
 
                 // Clear all current anchors for detected objects
                 if let weakSelf = self {
@@ -157,6 +168,8 @@ class ARDemoSceneView: SKScene {
 
         let feedbackGenerator: UIImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
         feedbackGenerator.impactOccurred()
+
+        self.updateInfoText(text: "Detect mode")
     }
 
     @objc public func detectButtonTouchUp(sender: UIButton) {
@@ -164,5 +177,36 @@ class ARDemoSceneView: SKScene {
         // Trigger a refresh of the anchors so the labels can change their colors
         // from record mode to display mode
         self.shouldRefreshAnchors = true
+        self.updateInfoText(text: "")
+    }
+
+    private func updateInfoText(text: String) {
+        if let detectInfoLabel: UILabel = self.detectInfoLabel() {
+            detectInfoLabel.text = text
+            self.layoutInfoLabel(infoLabel: detectInfoLabel)
+        }
+    }
+
+    private func detectInfoLabel() -> UILabel? {
+        if let view = view {
+            return view.viewWithTag(detectInfoLabelTag) as? UILabel
+        }
+
+        return nil
+    }
+
+    override func didMove(to view: SKView) {
+        if let detectInfoLabel: UILabel = self.detectInfoLabel() {
+            self.layoutInfoLabel(infoLabel: detectInfoLabel)
+        }
+    }
+
+    private func layoutInfoLabel(infoLabel: UILabel) {
+        if let view = view {
+            let viewFrame: CGRect = view.frame
+            let safeAreaInsets: UIEdgeInsets = view.safeAreaInsets
+            let infoLabelSizeRequired: CGSize = infoLabel.sizeThatFits(viewFrame.size)
+            infoLabel.frame = CGRect(x: 5.0, y: safeAreaInsets.top + 2.0, width: infoLabelSizeRequired.width, height: infoLabelSizeRequired.height)
+        }
     }
 }

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		13FFB1CF155C999A0B80069B /* FirebaseObjectDetectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FFB04E9A4A8428AE79489E /* FirebaseObjectDetectionProcessor.swift */; };
 		13FFB8B8D05A52B2E3FFAF71 /* CoreMLObjectDetectionProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FFB24109D723DEEF551E51 /* CoreMLObjectDetectionProcessor.swift */; };
-		13FFB8FA84B92ED1C34F834F /* ARDemoSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FFBA658E570AB16B491039 /* ARDemoSceneView.swift */; };
+		13FFB8FA84B92ED1C34F834F /* ARDemoScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FFBA658E570AB16B491039 /* ARDemoScene.swift */; };
 		13FFB8FCE440BD2AFF813B1E /* ObjectDetectionProcessorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FFBBDDCD3C42E5949D6C92 /* ObjectDetectionProcessorFactory.swift */; };
 		3530091C230F604B00F63819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3530091B230F604B00F63819 /* GoogleService-Info.plist */; };
 		3530091F23103E7400F63819 /* ObjectDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3530091E23103E7400F63819 /* ObjectDetector.swift */; };
@@ -30,7 +30,7 @@
 		065C275D89996DE9AEAAA630 /* Pods-ARDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARDemo/Pods-ARDemo.release.xcconfig"; sourceTree = "<group>"; };
 		13FFB04E9A4A8428AE79489E /* FirebaseObjectDetectionProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseObjectDetectionProcessor.swift; sourceTree = "<group>"; };
 		13FFB24109D723DEEF551E51 /* CoreMLObjectDetectionProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreMLObjectDetectionProcessor.swift; sourceTree = "<group>"; };
-		13FFBA658E570AB16B491039 /* ARDemoSceneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDemoSceneView.swift; sourceTree = "<group>"; };
+		13FFBA658E570AB16B491039 /* ARDemoScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARDemoScene.swift; sourceTree = "<group>"; };
 		13FFBBDDCD3C42E5949D6C92 /* ObjectDetectionProcessorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectDetectionProcessorFactory.swift; sourceTree = "<group>"; };
 		3530091B230F604B00F63819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3530091E23103E7400F63819 /* ObjectDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetector.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 			children = (
 				35AD06AC230C2DFF0045ED05 /* AppDelegate.swift */,
 				35AD06B0230C2DFF0045ED05 /* ARDemoViewController.swift */,
-				13FFBA658E570AB16B491039 /* ARDemoSceneView.swift */,
+				13FFBA658E570AB16B491039 /* ARDemoScene.swift */,
 				3530091D23103E0B00F63819 /* ObjectDetection */,
 				35300920231044B200F63819 /* ImageBufferHelpers */,
 				3530092323104A6F00F63819 /* ApplicationUIHelpers */,
@@ -305,7 +305,7 @@
 				3530092E2311769C00F63819 /* DetectButton.swift in Sources */,
 				35AD06B1230C2DFF0045ED05 /* ARDemoViewController.swift in Sources */,
 				35AD06AD230C2DFF0045ED05 /* AppDelegate.swift in Sources */,
-				13FFB8FA84B92ED1C34F834F /* ARDemoSceneView.swift in Sources */,
+				13FFB8FA84B92ED1C34F834F /* ARDemoScene.swift in Sources */,
 				13FFB1CF155C999A0B80069B /* FirebaseObjectDetectionProcessor.swift in Sources */,
 				3530091F23103E7400F63819 /* ObjectDetector.swift in Sources */,
 				35300922231044F700F63819 /* ImageBufferHelpers.swift in Sources */,

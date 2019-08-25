@@ -12,10 +12,14 @@ import UIKit
 public class ApplicationFonts {
 
     public static func labelFontName() -> String {
-        return "Avenir"
+        return "Avenir-Book"
     }
 
     public static func labelFontSize() -> CGFloat {
         return 12
+    }
+
+    public static func infoLabelFont() -> UIFont? {
+        return UIFont(name: ApplicationFonts.labelFontName(), size: UIFont.systemFontSize)
     }
 }

@@ -56,6 +56,7 @@ class ARDemoScene: SKScene {
             detectButton.addTarget(self, action: #selector(detectButtonTouchUp), for: .touchUpOutside)
             view.addSubview(detectButton)
 
+            // Info label to display the state of the object detection
             let detectionInfoLabel:UILabel = UILabel(frame: CGRect.zero)
             detectionInfoLabel.tag = detectInfoLabelTag;
             detectionInfoLabel.font = ApplicationFonts.infoLabelFont()
@@ -121,9 +122,12 @@ class ARDemoScene: SKScene {
                         let positionX: CGFloat = ((objectFrame.origin.x + (objectFrame.size.width / 2.0)) / bufferSize.width) * sceneSize.width
                         let positionY: CGFloat = ((objectFrame.origin.y + (objectFrame.size.height / 2.0)) / bufferSize.height) * sceneSize.height
 
+                        // Try to find the object in the scene that corresponds to the detected object
                         if let results: [ARHitTestResult] = self?.sceneView.hitTest(CGPoint(x: positionX, y: positionY), types: [.featurePoint, .existingPlaneUsingGeometry]), results.count > 0 {
                             if let result: ARHitTestResult = results.first {
                                 let transform = result.worldTransform
+                                // Save the information needed to create the UI element for the detected object
+                                // This is accessed in ARDemoViewController when the sprite kit nodes are created
                                 let anchor = ARAnchor(transform: transform)
                                 self?.sceneView.session.add(anchor: anchor)
                                 self?.currentAnchors.append(anchor)
@@ -136,6 +140,8 @@ class ARDemoScene: SKScene {
         } else if sceneViewMode == .displayMode && shouldRefreshAnchors {
             shouldRefreshAnchors = false
 
+            // If we have switched from detection mode to display mode we refresh the anchors
+            // with new styling. Just using a random color for now
             for anchor: ARAnchor in currentAnchors {
                 if let node: SKNode = self.sceneView.node(for: anchor) {
                     if node is SKShapeNode  {
@@ -180,6 +186,7 @@ class ARDemoScene: SKScene {
         self.updateInfoText(text: "")
     }
 
+    // MARK: - Info label helpers
     private func updateInfoText(text: String) {
         if let detectInfoLabel: UILabel = self.detectInfoLabel() {
             detectInfoLabel.text = text

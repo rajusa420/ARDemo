@@ -21,6 +21,8 @@ public class DetectButton: UIButton {
         ApplicationColors.detectButtonOuterRingColor().setStroke()
         outerRing.stroke()
 
+        // The inner ring changes color based on if the button is currently pressed
+        // (which allows the user to know they have enabled detection mode)
         let innerRingInset: CGFloat = padding + outerRingLineWidth
         let innerRingFrame: CGRect = rect.insetBy(dx: innerRingInset, dy: innerRingInset)
         let innerRing: UIBezierPath = UIBezierPath(ovalIn: CGRect(x:innerRingInset, y:innerRingInset, width:innerRingFrame.width, height:innerRingFrame.height))

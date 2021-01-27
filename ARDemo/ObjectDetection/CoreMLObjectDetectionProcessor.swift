@@ -9,7 +9,7 @@ import AVFoundation
 import CoreML
 import Vision
 
-public class CoreMLObjectDetectionProcessor: ObjectDetector {
+public class CoreMLObjectDetectionProcessor: ObjectDetectionProvider {
 
     init() {
         self.setupObjectDetectionProcess()

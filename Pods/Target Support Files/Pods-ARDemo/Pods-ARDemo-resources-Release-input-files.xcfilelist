@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-ARDemo/Pods-ARDemo-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/MLKitObjectDetection/MLKitObjectDetectionResources.bundle
+${PODS_CONFIGURATION_BUILD_DIR}/MLKitObjectDetectionCommon/MLKitObjectDetectionCommonResources.bundle

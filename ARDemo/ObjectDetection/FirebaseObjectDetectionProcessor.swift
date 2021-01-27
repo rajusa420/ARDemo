@@ -3,22 +3,24 @@
 // Copyright (c) 2019 Raj. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import Firebase
 import AVFoundation
+import MLKitObjectDetection
+import MLKitVision
 
-class FirebaseObjectDetectionProcessor: ObjectDetector {
+class FirebaseObjectDetectionProcessor: ObjectDetectionProvider {
 
-    private lazy var visionDetectionOptions: VisionObjectDetectorOptions = {
-        let options: VisionObjectDetectorOptions = VisionObjectDetectorOptions()
+    private lazy var visionDetectionOptions: ObjectDetectorOptions = {
+        let options = ObjectDetectorOptions()
         options.detectorMode = .singleImage
         options.shouldEnableMultipleObjects = true
         options.shouldEnableClassification = true
         return options
     }()
 
-    private lazy var objectDetector: VisionObjectDetector = {
-        let objectDetector = Vision.vision().objectDetector(options: self.visionDetectionOptions)
+    private lazy var objectDetector: ObjectDetector = {
+        let objectDetector = ObjectDetector.objectDetector(options: self.visionDetectionOptions)
         return objectDetector
     }()
 
@@ -37,27 +39,30 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
 
         // Asynchronously process the sample and detect objects
         let image: VisionImage = getVisionImage(buffer: sampleBuffer)
-        objectDetector.process(image) { [weak self] detectedVisionObjects, error in
+        objectDetector.process(image) { [weak self] visionDetectedObjects, error in
             DispatchQueue.main.async(execute: {
                 // Reset our processing flag once we are done via defer
                 defer {
                     self?.isProcessingSample = false
                 }
+                
                 guard error == nil else {
                     // Error.
                     return
                 }
 
-                guard let detectedVisionObjects: [VisionObject] = detectedVisionObjects, !detectedVisionObjects.isEmpty else {
+                guard let visionDetectedObjects = visionDetectedObjects, visionDetectedObjects.count > 0 else {
                     // No objects detected.
                     return
                 }
 
                 var detectedObjects: [DetectedObject] = []
-                for visionObject: VisionObject in detectedVisionObjects {
-                    // Only include objects that meet a confidence threshold
-                    if let confidence = visionObject.confidence?.floatValue, confidence > DetectedObjectConfidenceRequired {
-                        detectedObjects.append(DetectedObject(frame: visionObject.frame, name: self?.getStringFromDetectedObjectCategory(category: visionObject.classificationCategory) ?? "Unknown", description: ""))
+                for visionObject: Object in visionDetectedObjects {
+                    for label in visionObject.labels {
+                        // Only include objects that meet a confidence threshold
+                        if  label.confidence > DetectedObjectConfidenceRequired {
+                            detectedObjects.append(DetectedObject(frame: visionObject.frame, name: label.text, description: ""))
+                        }
                     }
                 }
 
@@ -72,50 +77,22 @@ class FirebaseObjectDetectionProcessor: ObjectDetector {
 
     private func getVisionImage(buffer sampleBuffer: CMSampleBuffer) -> VisionImage {
         let image: VisionImage = VisionImage(buffer: sampleBuffer)
-        image.metadata = getVisionImageMetadata()
+        image.orientation = imageOrientation(deviceOrientation: UIDevice.current.orientation)
         return image
     }
 
-    private func getVisionImageMetadata() -> VisionImageMetadata {
-        let cameraPosition = AVCaptureDevice.Position.back
-        let metadata: VisionImageMetadata = VisionImageMetadata()
-        metadata.orientation = imageOrientation(deviceOrientation: UIDevice.current.orientation, cameraPosition: cameraPosition)
-        return metadata
-    }
-
-    private func imageOrientation(deviceOrientation: UIDeviceOrientation, cameraPosition: AVCaptureDevice.Position) -> VisionDetectorImageOrientation {
+    private func imageOrientation(deviceOrientation: UIDeviceOrientation) -> UIImage.Orientation {
         switch deviceOrientation {
-        case .portrait:
-            return cameraPosition == .front ? .leftTop : .rightTop
-        case .landscapeLeft:
-            return cameraPosition == .front ? .bottomLeft : .topLeft
-        case .portraitUpsideDown:
-            return cameraPosition == .front ? .rightBottom : .leftBottom
-        case .landscapeRight:
-            return cameraPosition == .front ? .topRight : .bottomRight
-        case .faceDown, .faceUp, .unknown:
-            return .leftTop
-        default:
-            return .topLeft
-        }
-    }
-
-    private func getStringFromDetectedObjectCategory(category: VisionObjectCategory) -> String {
-        switch category {
-        case .fashionGoods:
-            return "Fashion Goods"
-        case .food:
-            return "Food"
-        case .homeGoods:
-            return "Home Goods"
-        case .places:
-            return "Places"
-        case .plants:
-            return "Plants"
-        case .unknown:
-            return "Unknown"
-        default:
-            return "New Type"
+            case UIDeviceOrientation.portrait, .faceUp:
+                return UIImage.Orientation.right
+            case UIDeviceOrientation.portraitUpsideDown, .faceDown:
+                return UIImage.Orientation.left
+            case UIDeviceOrientation.landscapeLeft:
+                return UIImage.Orientation.up
+            case UIDeviceOrientation.landscapeRight:
+                return UIImage.Orientation.down
+            default:
+                return UIImage.Orientation.up
         }
     }
 }

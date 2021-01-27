@@ -10,7 +10,7 @@ import Foundation
 public class ObjectDetectionProcessorFactory {
     private static let useFirebaseProcessor: Bool = true
 
-    public static func getInstance() -> ObjectDetector {
+    public static func getInstance() -> ObjectDetectionProvider {
         if useFirebaseProcessor {
             return FirebaseObjectDetectionProcessor()
         }

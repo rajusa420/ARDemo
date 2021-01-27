@@ -1,3 +1,2 @@
-Pods/FirebaseMLVisionObjectDetection/Frameworks/FirebaseMLVisionObjectDetection.framework/FirebaseMLVisionObjectDetection filter=lfs diff=lfs merge=lfs -text
-Pods/FirebaseMLCommon/Frameworks/FirebaseMLCommon.framework/FirebaseMLCommon filter=lfs diff=lfs merge=lfs -text
 ARDemo/Resources/Models/ObjectDetectorModel.mlmodel filter=lfs diff=lfs merge=lfs -text
+Pods/MLKitVisionKit/Frameworks/MLKitVisionKit.framework/MLKitVisionKit filter=lfs diff=lfs merge=lfs -text

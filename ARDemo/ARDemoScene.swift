@@ -26,25 +26,14 @@ class ARDemoScene: SKScene {
     private var pixelBufferSize: CGSize = CGSize(width: 0, height: 0)
     private var analysisBufferId: UInt = 0
 
-    private lazy var objectDetectionProcessor: ObjectDetector = ObjectDetectionProcessorFactory.getInstance()
+    private lazy var objectDetectionProcessor = ObjectDetectionProcessorFactory.getInstance()
 
     private let detectInfoLabelTag: Int = 55000
     private func setUpWorld() {
-        guard let _: ARFrame = sceneView.session.currentFrame else {
+        guard let _ = sceneView.session.currentFrame else {
             return
         }
-//        // Test code to add an anchor at startup
-//        // If we start saving anchors this is where we could load them up
-//
-//
-//        var translation: simd_float4x4 = matrix_identity_float4x4
-//        translation.columns.3.z = -0.3
-//
-//        let transform: simd_float4x4 = currentFrame.camera.transform * translation
-//        let anchor: ARAnchor = ARAnchor(transform: transform)
-//        sceneView.session.add(anchor: anchor)
-//        currentAnchors.append(anchor)
-//        anchorNames[anchor.identifier] = "Test Anchor"
+
         if let view = view {
             // Button to enable detection mode
             let viewFrame: CGRect = view.frame

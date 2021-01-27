@@ -17,9 +17,9 @@ class ARDemoViewController: UIViewController, ARSKViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let view:ARSKView = self.view as? ARSKView {
+        if let view: ARSKView = self.view as? ARSKView {
             sceneView = view
-            sceneView!.delegate = self
+            sceneView?.delegate = self
 
             // Initialize our Sprite Kit scene and then present it using our ARSKView
             let scene: ARDemoScene = ARDemoScene(size: view.bounds.size)
